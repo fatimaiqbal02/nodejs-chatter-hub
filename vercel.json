@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server/index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      {
+        "src": "/server/(.*)",
+        "dest": "server/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "$1"
+      }
+    ]
+  }
+  
