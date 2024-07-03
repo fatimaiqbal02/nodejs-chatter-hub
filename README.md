@@ -12,7 +12,7 @@ Chatter Hub is a real-time chat application developed using Node.js, HTML, CSS, 
 - **Responsive Design**: Adapts seamlessly to different screen sizes.
 
 ## Screenshots
-<img src="https://github.com/fatimaiqbal02/nodejs-chatter-hub/assets/111382869/51cec55d-ae85-4e2e-9ff8-cf9cc056eb31" height="500" width="200" >  &nbsp; <img src="https://github.com/fatimaiqbal02/nodejs-chatter-hub/assets/111382869/3abaa549-2265-4eab-b444-656f71207787" height="450" width="600">
+<img src="https://github.com/fatimaiqbal02/nodejs-chatter-hub/assets/111382869/51cec55d-ae85-4e2e-9ff8-cf9cc056eb31" height="500" width="200" >  &nbsp; <img src="https://github.com/fatimaiqbal02/nodejs-chatter-hub/assets/111382869/3abaa549-2265-4eab-b444-656f71207787" height="450" width="580">
 
 ## Installation
 
