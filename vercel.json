@@ -8,6 +8,14 @@
       {
         "src": "index.html",
         "use": "@vercel/static"
+      },
+      {
+        "src": "css/**/*.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "js/**/*.js",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
@@ -18,7 +26,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "$1"
+        "dest": "/$1"
       }
     ]
   }
