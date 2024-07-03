@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatterHub</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"></script>
+     <!-- font awesome link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+       <!--  remixon link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <i class="ri-wechat-fill"></i>
+            <h1>Chatter Hub</h1>
+        </div>
+        <div class="navbar-right">
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+    </nav>
+    
+    <div class="main">
+        <aside class="sidebar">
+            <h2>Active Chatters</h2>
+            <ul id="active-members"></ul>
+        </aside>
+        
+        <div class="chat-container">
+            <div class="messages" id="messages"></div>
+            <div class="send">
+                <form action="#" id="send-container">
+                    <input type="text" name="messageInp" id="messageInp" placeholder="Type your message here...">
+                    <button class="btn" type="submit"><i class="ri-send-plane-2-line"></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

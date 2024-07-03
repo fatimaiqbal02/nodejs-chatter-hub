@@ -1,0 +1,3 @@
+ npm init
+ npm i socket.io
+ nodemon index.js or node index.js
