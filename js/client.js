@@ -1,4 +1,4 @@
-const socket = io('https://chatter-hub-pink.vercel.app/');
+const socket = io('/');
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
