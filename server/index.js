@@ -1,13 +1,24 @@
-const io = require('socket.io')(3000, {
+const express = require('express');
+const http = require('http');
+const socketIo = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIo(server, {
     cors: {
         origin: "*"
     }
 });
 
+const PORT = process.env.PORT || 3000; // Use process.env.PORT for dynamic port assignment
+
+server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
 const users = {};
 
 io.on('connection', socket => {
-    
     socket.on('new-user-joined', name => {
         users[socket.id] = name;
         socket.broadcast.emit('user-joined', name);
