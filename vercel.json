@@ -25,6 +25,10 @@
         "dest": "server/$1"
       },
       {
+        "src": "/socket.io/(.*)",
+        "dest": "/server"
+      },
+      {
         "src": "/(.*)",
         "dest": "/$1"
       }
