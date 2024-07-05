@@ -1,6 +1,6 @@
 const io = require('socket.io')({
     cors: {
-        origin: ['https://nodejs-chatter-hub-server.vercel.app'],
+        origin: ['https://nodejs-chatter-hub-server.vercel.app/'],
         methods: ['POST', 'GET'],
         credentials: true
     }
