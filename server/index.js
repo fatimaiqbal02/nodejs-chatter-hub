@@ -21,6 +21,7 @@ const io = require('socket.io')(server, {
         methods: ["GET", "POST"]
     }
 });
+io.listen(9000);
 
 app.get('/', (req, res) => {
     res.send('Server is running!');
