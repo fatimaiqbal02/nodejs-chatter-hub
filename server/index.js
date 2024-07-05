@@ -2,6 +2,8 @@ const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const cors = require('cors');
+path = require('path');
+
 
 const app = express();
 app.use(cors());
@@ -15,16 +17,18 @@ app.use((req, res, next) => {
 });
 
 const server = http.createServer(app);
-const io = require('socket.io')(server, { 
-    cors: {
-        origin: "https://nodejs-chatter-hub.vercel.app",
-        methods: ["GET", "POST"]
+const io = require("socket.io")(server, {
+    handlePreflightRequest: (req, res) => {
+        const headers = {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+            "Access-Control-Allow-Origin": req.headers.origin, //or the specific origin you want to give access to,
+            "Access-Control-Allow-Credentials": true
+        };
+        res.writeHead(200, headers);
+        res.end();
     }
 });
 
-app.get('/', (req, res) => {
-    res.send('Server is running!');
-});
 
 const users = {};
 
