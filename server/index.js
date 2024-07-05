@@ -1,10 +1,22 @@
 const express = require('express');
-const https = require('https');
+const http = require('http');
 const socketIo = require('socket.io');
+const cors = require('cors');
 
 const app = express();
-const server = https.createServer(app);
-const io = require('socket.io')(server, { origins: '*:*'});
+app.use(cors());
+
+const server = http.createServer(app);
+const io = require('socket.io')(server, { 
+    cors: {
+        origin: "*",
+        methods: ["GET", "POST"]
+    }
+});
+
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
 
 const users = {};
 
@@ -32,5 +44,4 @@ io.on('connection', (socket) => {
     });
 });
 
-// This exports the server as a module
 module.exports = server;
