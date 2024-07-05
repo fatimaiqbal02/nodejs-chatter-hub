@@ -20,11 +20,8 @@
     ],
     "routes": [
         {
-            "handle": "filesystem"
-        },
-        {
-            "src": "/server/(.*)",
-            "dest": "server/$1"
+            "src": "/",
+            "dest": "/"
         },
         {
             "src": "/(.*)",
