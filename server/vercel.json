@@ -21,7 +21,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/"
+            "dest": "server/index.js"
         }
         
     ]
