@@ -1,32 +1,53 @@
 {
     "version": 2,
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                },
+                {
+                    "key": "Access-Control-Allow-Methods",
+                    "value": "GET, POST"
+                },
+                {
+                    "key": "Access-Control-Allow-Headers",
+                    "value": "X-Requested-With, Content-Type, Authorization"
+                }
+            ]
+        }
+    ],
     "builds": [
-      {
-        "src": "server/index.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "index.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "css/**/*.css",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "js/**/*.js",
-        "use": "@vercel/static"
-      }
+        {
+            "src": "server/index.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "index.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "css/**/*.css",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "js/**/*.js",
+            "use": "@vercel/static"
+        }
     ],
     "routes": [
-      { "handle": "filesystem" },
-      {
-        "src": "/server/(.*)",
-        "dest": "server/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/server/(.*)",
+            "dest": "server/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
     ]
-  }
+}
