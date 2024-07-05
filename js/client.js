@@ -1,4 +1,4 @@
-const socket = io('https://nodejs-chatter-hub-server.vercel.app:3000');
+const socket = io('http://localhost:3000');
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
@@ -7,7 +7,7 @@ const activeMembersList = document.getElementById('active-members');
 var audio = new Audio('ting.mp3');
 
 //to ask the user name when he joins the chat
-let name = prompt("Enter your name to join");
+const name = prompt("Enter your name to join");
 if (!name || name.trim() === '') {
     name = 'Anonymous';
 }
