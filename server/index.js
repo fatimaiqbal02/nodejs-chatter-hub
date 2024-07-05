@@ -1,4 +1,4 @@
-const io = require('socket.io')(3000, {
+const io = require('socket.io')({
     cors: {
         origin: ['https://nodejs-chatter-hub-server.vercel.app'],
         methods: ['POST', 'GET'],
@@ -30,3 +30,5 @@ io.on('connection', socket => {
         socket.emit('active-users', Object.values(users));
     });
 });
+
+module.exports = io;
