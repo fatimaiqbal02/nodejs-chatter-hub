@@ -7,7 +7,7 @@ const activeMembersList = document.getElementById('active-members');
 var audio = new Audio('ting.mp3');
 
 //to ask the user name when he joins the chat
-const name = prompt("Enter your name to join");
+let name = prompt("Enter your name to join");
 if (!name || name.trim() === '') {
     name = 'Anonymous';
 }
