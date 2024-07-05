@@ -1,4 +1,4 @@
-const socket = io('https://nodejs-chatter-hub-server.vercel.app');
+const socket = io('https://nodejs-chatter-hub-server.vercel.app:3000');
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');

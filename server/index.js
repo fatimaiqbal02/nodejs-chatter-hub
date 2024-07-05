@@ -2,8 +2,6 @@ const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const cors = require('cors');
-path = require('path');
-
 
 const app = express();
 app.use(cors());
@@ -24,8 +22,9 @@ const io = require('socket.io')(server, {
     }
 });
 
-
-
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
 
 const users = {};
 
